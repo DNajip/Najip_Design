@@ -1,0 +1,312 @@
+/* ============================================
+   NAJIP DESIGN - Animaciones y Micro-interacciones
+   ============================================ */
+
+/* ---- Animaciones de Entrada ---- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---- Animaciones de Pulso ---- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(27, 181, 167, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(27, 181, 167, 0.4);
+    }
+}
+
+/* ---- Animaciones Flotantes ---- */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+    66% {
+        transform: translateY(-4px) rotate(-2deg);
+    }
+}
+
+@keyframes floatingText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatEmoji {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+/* ---- Gradiente Animado ---- */
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* ---- Animación de Línea ---- */
+
+@keyframes lineGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ============================================
+   APLICACIÓN DE ANIMACIONES
+   ============================================ */
+
+/* Hero: animaciones de entrada */
+.hero-section .hero-badge {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-section .hero-title {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-section .hero-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-section .hero-text {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.hero-section .hero-buttons {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.floating-text {
+    animation: floatingText 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+.hero-section .hero-image-card {
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+/* Emojis flotantes */
+.floating-emoji.emoji-heart {
+    animation: floatEmoji 3s ease-in-out infinite;
+}
+
+.floating-emoji.emoji-thumb {
+    animation: floatEmoji 3.5s ease-in-out 0.5s infinite;
+}
+
+.floating-emoji.emoji-fire {
+    animation: floatEmoji 4s ease-in-out 1s infinite;
+}
+
+/* Botón WhatsApp: pulso */
+.whatsapp-float {
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* Tarjetas de presencia: efecto hover suave */
+.presencia-card {
+    transition:
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.3s ease,
+        box-shadow 0.4s ease,
+        background 0.3s ease;
+}
+
+/* Tarjetas de servicio: efecto hover suave */
+.service-card {
+    transition:
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.3s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Botones: micro-interacción */
+.btn-primary-custom,
+.btn-outline-custom {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.btn-primary-custom:active,
+.btn-outline-custom:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Navbar: transición suave */
+.navbar {
+    transition:
+        background 0.4s ease,
+        padding 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Links de navbar */
+.navbar-nav .nav-link {
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+/* Hero image card glow */
+.hero-image-card {
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ---- Efecto de gradiente animado en el hero ---- */
+.hero-section {
+    background-size: 200% 200%;
+}
+
+/* ---- Efecto de brillo en el badge ---- */
+.hero-badge {
+    background-size: 200% auto;
+    animation: fadeInDown 0.8s ease-out, shimmer 3s linear infinite 2s;
+}
+
+/* ---- Transiciones para Footer links ---- */
+.footer-links a {
+    transition:
+        color 0.2s ease,
+        padding-left 0.3s ease;
+}
+
+/* ---- Prefiere movimiento reducido ---- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .whatsapp-float {
+        animation: none;
+    }
+
+    .floating-emoji {
+        animation: none;
+    }
+}
