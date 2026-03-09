@@ -33,6 +33,8 @@
 </head>
 
 <body>
+    <!-- Contenedor para tsParticles en toda la página -->
+    <div id="tsparticles"></div>
 
     <!-- ============================================
          NAVBAR
@@ -54,16 +56,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+                        <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">SERVICIOS</a>
+                        <a class="nav-link" href="#servicios">SERVICIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="soluciones.html">SOLUCIONES</a>
+                        <a class="nav-link" href="#soluciones">SOLUCIONES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                        <a class="nav-link" href="#nosotros">NOSOTROS</a>
                     </li>
                     <li class="nav-item ms-lg-2">
                         <a class="nav-link btn-cta-nav" href="https://wa.me/+50586972782"
@@ -78,8 +80,6 @@
          HERO SECTION
          ============================================ -->
     <section class="hero-section" id="inicio">
-        <!-- Contenedor para tsParticles -->
-        <div id="tsparticles"></div>
         <div class="container">
             <div class="row align-items-center">
                 <!-- Contenido del Hero -->
@@ -100,7 +100,7 @@
                         <a href="#contacto" class="btn btn-primary-custom" data-aos="fade-up" data-aos-delay="600">
                             SOLICITAR ASESORÍA
                         </a>
-                        <a href="servicios.html" class="btn btn-outline-custom" data-aos="fade-up" data-aos-delay="700">
+                        <a href="#servicios" class="btn btn-outline-custom" data-aos="fade-up" data-aos-delay="700">
                             NUESTROS SERVICIOS
                         </a>
                     </div>
@@ -113,8 +113,15 @@
                             <img src="images/hero-doctora.png" alt="Doctora Profesional - Najip Design"
                                 style="border-radius: 12px;" style="width: 100%; max-width: 700px;">
                         </div>
-                        <span class="floating-emoji emoji-heart">❤️</span>
+                        <span class="floating-emoji emoji-heart">😍</span>
                         <span class="floating-emoji emoji-thumb">👍</span>
+                        <span class="floating-emoji emoji-star">❤️</span>
+                        <div class="floating-badge badge-revenue">
+                            <i class="fas fa-chart-line"></i> +150%
+                        </div>
+                        <div class="floating-badge badge-patients">
+                            <i class="fas fa-user-plus"></i> Pacientes
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,7 +195,7 @@
                             style="display: block; color: #2dd4c4; margin-top: 5px;">presencia digital</span>
                     </h2>
                     <p class="hero-text mx-auto"
-                        style="color: #b0caca; font-size: 1.15rem; line-height: 1.6; max-width: 800px;">
+                        style="color: #b0caca; font-size: 1.15rem; line-height: 1.6; max-width: 1000px;">
                         Es común que los profesionales de la salud se enfoquen únicamente en su práctica y dejen de lado
                         su imagen en internet, perdiendo la oportunidad de conectar con pacientes de alto nivel.
                     </p>
@@ -265,6 +272,631 @@
     </section>
 
     <!-- ============================================
+         MENSAJE FINAL / IMPACTO VISUAL
+         ============================================ -->
+    <section class="section-mensaje py-5 position-relative">
+        <div class="container my-5 position-relative z-1">
+            <div class="row align-items-center justify-content-center g-4">
+
+                <!-- Imagen Proyecto Izquierda -->
+                <div class="col-lg-3 col-md-5 d-none d-lg-block" data-aos="fade-right">
+                    <div class="animated-border-card mx-auto shadow-lg"
+                        style="max-width: 280px; transform: rotate(-3deg);">
+                        <img src="proyectos/web.png" alt="Proyecto de Diseño Web" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Contenido Central UX/UI -->
+                <div class="col-lg-6 col-md-10 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="p-4 p-md-5 rounded-4 position-relative"
+                        style="background: rgba(4, 34, 43, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(27, 181, 167, 0.15); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        <div class="mb-3 d-inline-block px-3 py-1 rounded-pill"
+                            style="background: rgba(27, 181, 167, 0.1); color: var(--primary-light); font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;">
+                            POTENCIA TU MARCA</div>
+
+                        <h2 class="section-title text-white mb-4"
+                            style="font-size: clamp(1.8rem, 3vw, 2.3rem); line-height: 1.3;">
+                            Más que servicios, construimos <span class="text-gradient">crecimiento digital</span>
+                        </h2>
+
+                        <p class="mensaje-text" style="font-size: 1.1rem; color: #b8d4d1; font-weight: 300;">
+                            Nuestro objetivo principal no es solo ofrecerte soluciones aisladas, sino construir una
+                            <strong class="text-white">presencia online unificada y robusta</strong>.
+                        </p>
+
+                        <div class="mx-auto my-4"
+                            style="width: 60px; height: 3px; background: linear-gradient(90deg, transparent, var(--primary), transparent);">
+                        </div>
+
+                        <p class="mensaje-text mb-0"
+                            style="font-size: 1.05rem; color: #9abdb9; font-weight: 300; line-height: 1.8;">
+                            Al combinar <span class="text-white fw-medium">estrategia comercial</span>, un <span
+                                class="text-white fw-medium">diseño cautivador</span> y <span
+                                class="text-white fw-medium">marketing de precisión</span>, desarrollamos ecosistemas
+                            que generan resultados tangibles y garantizan que tu marca destaque entre la competencia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Imagen Proyecto Derecha -->
+                <div class="col-lg-3 col-md-5 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                    <div class="animated-border-card mx-auto shadow-lg"
+                        style="max-width: 280px; transform: rotate(3deg);">
+                        <img src="proyectos/web2.png" alt="Proyecto de Diseño Web 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imágenes en móvil (debajo del contenido) -->
+            <div class="row d-lg-none mt-5 justify-content-center g-4">
+                <div class="col-sm-6 col-10" data-aos="fade-up">
+                    <div class="animated-border-card mx-auto shadow-lg w-100">
+                        <img src="proyectos/web.png" alt="Proyecto Web" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="animated-border-card mx-auto shadow-lg w-100">
+                        <img src="proyectos/web2.png" alt="Proyecto Web 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================
+         CARRUSEL DE SERVICIOS (SWIPER)
+         ============================================ -->
+    <section class="section-servicios pb-5" id="servicios">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper servicesSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper py-4">
+
+                    <!-- Servicio 1 -->
+                    <div class="swiper-slide px-2">
+                        <div class="service-card text-center h-100 mx-auto" style="max-width: 450px;">
+                            <div class="service-icon mx-auto">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>Desarrollo Web</h4>
+                            <p class="service-desc text-start">
+                                Diseñamos páginas web modernas, funcionales y adaptadas a dispositivos móviles que
+                                permiten presentar tu negocio de forma clara y profesional. Mejora tu imagen digital y
+                                facilita que nuevos clientes encuentren tu negocio.
+                            </p>
+                            <div class="text-start mb-3">
+                                <strong class="text-white">Beneficios:</strong>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px; margin-top: 10px; line-height: 1.5;">
+                                    <li>Mejora la imagen profesional de tu negocio</li>
+                                    <li>Facilita el contacto con nuevos clientes</li>
+                                    <li>Presenta tus servicios de forma clara</li>
+                                </ul>
+                            </div>
+                            <div class="service-detail text-start" style="font-size: 0.85rem;">
+                                <strong class="text-white">Incluye:</strong><br>
+                                Diseño web profesional, Landing pages, Adaptación móvil, Integración con WhatsApp.
+                            </div>
+                            <a href="https://wa.me/+50586972782"
+                                class="btn btn-outline-custom w-100 justify-content-center mt-3" target="_blank"
+                                style="padding: 10px;">
+                                Solicitar Servicio
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="swiper-slide px-2">
+                        <div class="service-card text-center h-100 mx-auto" style="max-width: 450px;">
+                            <div class="service-icon mx-auto">
+                                <i class="fas fa-ad"></i>
+                            </div>
+                            <h4>Publicidad Digital</h4>
+                            <p class="service-desc text-start">
+                                Diseñamos y gestionamos campañas publicitarias en Meta (Facebook e Instagram) para
+                                ayudarte a llegar a nuevos clientes de forma estratégica y enfocada en resultados.
+                            </p>
+                            <div class="text-start mb-3">
+                                <strong class="text-white">Beneficios:</strong>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px; margin-top: 10px; line-height: 1.5;">
+                                    <li>Mayor visibilidad para tu negocio</li>
+                                    <li>Captación de nuevos clientes potenciales</li>
+                                    <li>Resultados medibles y optimizables</li>
+                                </ul>
+                            </div>
+                            <div class="service-detail text-start" style="font-size: 0.85rem;">
+                                <strong class="text-white">Incluye:</strong><br>
+                                Análisis del público objetivo, Creación de anuncios, Segmentación estratégica,
+                                Optimización.
+                            </div>
+                            <a href="https://wa.me/+50586972782"
+                                class="btn btn-outline-custom w-100 justify-content-center mt-3" target="_blank"
+                                style="padding: 10px;">
+                                Solicitar Servicio
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="swiper-slide px-2">
+                        <div class="service-card text-center h-100 mx-auto" style="max-width: 450px;">
+                            <div class="service-icon mx-auto">
+                                <i class="fas fa-share-nodes"></i>
+                            </div>
+                            <h4>Redes Sociales</h4>
+                            <p class="service-desc text-start">
+                                Desarrollamos estrategias de contenido para redes sociales que permiten fortalecer la
+                                presencia digital de tu marca, generar confianza y comunicar de forma efectiva tus
+                                servicios.
+                            </p>
+                            <div class="text-start mb-3">
+                                <strong class="text-white">Beneficios:</strong>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px; margin-top: 10px; line-height: 1.5;">
+                                    <li>Mejora la presencia digital de tu marca</li>
+                                    <li>Genera mayor interacción y confianza</li>
+                                    <li>Permite comunicar mejor tus servicios</li>
+                                </ul>
+                            </div>
+                            <div class="service-detail text-start" style="font-size: 0.85rem;">
+                                <strong class="text-white">Incluye:</strong><br>
+                                Planificación de contenido, Diseño gráfico, Copywriting, Optimización de perfiles.
+                            </div>
+                            <a href="https://wa.me/+50586972782"
+                                class="btn btn-outline-custom w-100 justify-content-center mt-3" target="_blank"
+                                style="padding: 10px;">
+                                Solicitar Servicio
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4 -->
+                    <div class="swiper-slide px-2">
+                        <div class="service-card text-center h-100 mx-auto" style="max-width: 450px;">
+                            <div class="service-icon mx-auto">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h4>Producción de Video</h4>
+                            <p class="service-desc text-start">
+                                El contenido audiovisual capta la atención. Desarrollamos videos diseñados para
+                                fortalecer tu presencia digital y mejorar la comunicación con tu audiencia de forma
+                                dinámica.
+                            </p>
+                            <div class="text-start mb-3">
+                                <strong class="text-white">Beneficios:</strong>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px; margin-top: 10px; line-height: 1.5;">
+                                    <li>Mayor impacto visual en redes sociales</li>
+                                    <li>Contenido atractivo para campañas</li>
+                                    <li>Mayor engagement con tu audiencia</li>
+                                </ul>
+                            </div>
+                            <div class="service-detail text-start" style="font-size: 0.85rem;">
+                                <strong class="text-white">Incluye:</strong><br>
+                                Grabación de contenido, Edición profesional, Creación de reels, Adaptación digital.
+                            </div>
+                            <a href="https://wa.me/+50586972782"
+                                class="btn btn-outline-custom w-100 justify-content-center mt-3" target="_blank"
+                                style="padding: 10px;">
+                                Solicitar Servicio
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5 -->
+                    <div class="swiper-slide px-2">
+                        <div class="service-card text-center h-100 mx-auto" style="max-width: 450px;">
+                            <div class="service-icon mx-auto">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>Branding Visual</h4>
+                            <p class="service-desc text-start">
+                                La identidad visual genera confianza y reconocimiento. Desarrollamos identidades
+                                visuales que reflejan los valores de cada negocio y diferencian en el mercado.
+                            </p>
+                            <div class="text-start mb-3">
+                                <strong class="text-white">Beneficios:</strong>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px; margin-top: 10px; line-height: 1.5;">
+                                    <li>Mayor reconocimiento de marca</li>
+                                    <li>Imagen profesional y coherente</li>
+                                    <li>Diferenciación frente a la competencia</li>
+                                </ul>
+                            </div>
+                            <div class="service-detail text-start" style="font-size: 0.85rem;">
+                                <strong class="text-white">Incluye:</strong><br>
+                                Diseño de logotipo, Paleta de colores, Tipografía, Aplicaciones para redes.
+                            </div>
+                            <a href="https://wa.me/+50586972782"
+                                class="btn btn-outline-custom w-100 justify-content-center mt-3" target="_blank"
+                                style="padding: 10px;">
+                                Solicitar Servicio
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Paginación -->
+                <div class="swiper-pagination mt-4 position-relative bottom-0"></div>
+                <!-- Controles -->
+                <div class="swiper-button-next text-primary"></div>
+                <div class="swiper-button-prev text-primary"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CARRUSEL INFINITO DE PORTAFOLIO MEDICO (DRA. JENELLY)
+         ============================================ -->
+    <section class="section-servicios pb-5 overflow-hidden" id="soluciones">
+        <div class="container-fluid px-0">
+
+            <div class="container mb-4">
+                <h2 class="section-title mb-4" style="font-size: 2.5rem; color: #ffffff; line-height: 1.2;">
+                    Nuestro trabajo con la <span style="display: block; color: #2dd4c4; margin-top: 5px;">Dra. Jenelly
+                        Pineda</span>
+                </h2>
+            </div>
+
+            <!-- Swiper 1: Corre hacia la izquierda -->
+            <div class="swiper marqueeSwiper marqueeSwiper1 mb-4" data-aos="fade-left">
+                <div class="swiper-wrapper">
+                    <!-- 15 Imágenes - Mitad 1 -->
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/1.png" alt="Dra Jenelly 1"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/2.png" alt="Dra Jenelly 2"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/3.png" alt="Dra Jenelly 3"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/4.png" alt="Dra Jenelly 4"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/5.png" alt="Dra Jenelly 5"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/6.png" alt="Dra Jenelly 6"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/7.png" alt="Dra Jenelly 7"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/8.png" alt="Dra Jenelly 8"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/9.png" alt="Dra Jenelly 9"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/10.png" alt="Dra Jenelly 10"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/11.png" alt="Dra Jenelly 11"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/12.png" alt="Dra Jenelly 12"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/13.png" alt="Dra Jenelly 13"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/14.png" alt="Dra Jenelly 14"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/15.png" alt="Dra Jenelly 15"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper 2: Corre hacia la derecha -->
+            <div class="swiper marqueeSwiper marqueeSwiper2" data-aos="fade-right">
+                <div class="swiper-wrapper">
+                    <!-- 15 Imágenes - Mitad 2 -->
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/16.png" alt="Dra Jenelly 16"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/17.png" alt="Dra Jenelly 17"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/18.png" alt="Dra Jenelly 18"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/19.png" alt="Dra Jenelly 19"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/20.png" alt="Dra Jenelly 20"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/21.png" alt="Dra Jenelly 21"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/22.png" alt="Dra Jenelly 22"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/23.png" alt="Dra Jenelly 23"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/24.png" alt="Dra Jenelly 24"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/25.png" alt="Dra Jenelly 25"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/26.png" alt="Dra Jenelly 26"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/27.png" alt="Dra Jenelly 27"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/28.png" alt="Dra Jenelly 28"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/29.png" alt="Dra Jenelly 29"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Imagenes de la Doctora Jenelly Pineda/sAN.png" alt="Dra Jenelly Especial"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios médicos descritos en el texto -->
+            <div class="container row g-4 position-relative z-1 mt-5 mx-auto">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="presencia-card text-center" style="padding: 30px 20px;">
+                        <div class="card-icon mx-auto" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem;">Presencia Médica</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Redes sociales enfocadas en transmitir
+                            máxima confianza a tus pacientes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="presencia-card text-center" style="padding: 30px 20px;">
+                        <div class="card-icon mx-auto" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem;">Sitios para Clínicas</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Páginas web profesionales que muestran
+                            tu experiencia claramente.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="presencia-card text-center" style="padding: 30px 20px;">
+                        <div class="card-icon mx-auto" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem;">Captación</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Campañas Meta Ads para tratamientos
+                            estéticos y odontológicos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="presencia-card text-center" style="padding: 30px 20px;">
+                        <div class="card-icon mx-auto" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem;">Educación</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Creación de contenido audiovisual
+                            educativo para atraer clientes.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         CARRUSEL INFINITO DE PORTAFOLIO MEDICO (DR. DANNY PRAVIA)
+         ============================================ -->
+    <section class="section-servicios pb-5 overflow-hidden">
+        <div class="container-fluid px-0">
+
+            <div class="container mb-4 mt-5">
+                <h2 class="section-title mb-4" style="font-size: 2.5rem; color: #ffffff; line-height: 1.2;">
+                    Nuestro trabajo con el <span style="display: block; color: #2dd4c4; margin-top: 5px;">Dr. Danny
+                        Pravia</span>
+                </h2>
+            </div>
+
+            <!-- Swiper 3: Único Carrusel para Dr. Danny Pravia -->
+            <div class="swiper marqueeSwiper marqueeSwiper3 mb-4" data-aos="fade-up" dir="ltr">
+                <div class="swiper-wrapper">
+                    <!-- Set 1 -->
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/1.png" alt="Dr Danny 1"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/2.png" alt="Dr Danny 2"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/3.png" alt="Dr Danny 3"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/4.png" alt="Dr Danny 4"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/5.png" alt="Dr Danny 5"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/1.png" alt="Dr Danny 1"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/2.png" alt="Dr Danny 2"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/3.png" alt="Dr Danny 3"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/4.png" alt="Dr Danny 4"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/5.png" alt="Dr Danny 5"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+
+                    <!-- Set 3 -->
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/1.png" alt="Dr Danny 1"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/2.png" alt="Dr Danny 2"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/3.png" alt="Dr Danny 3"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/4.png" alt="Dr Danny 4"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                    <div class="swiper-slide" style="width: auto;">
+                        <img src="images/Dr Danny- Dentista/5.png" alt="Dr Danny 5"
+                            style="height: 280px; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN: NOSOTROS CONTENIDO
+         ============================================ -->
+    <section class="section-presencia py-5" id="nosotros">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title text-start mb-4" style="font-size: 2.2rem;">
+                        Nuestra <span class="text-gradient">Esencia</span>
+                    </h2>
+                    <p class="hero-text mb-4" style="max-width: 100%; font-size: 1.1rem; line-height: 1.8;">
+                        Najip Design nace con la idea de ayudar a profesionales y empresas a desarrollar una presencia
+                        digital que refleje el verdadero valor de sus servicios. En un mundo conectado, la forma en que
+                        una marca se presenta puede marcar la diferencia.
+                    </p>
+                    <p class="hero-text mb-4" style="max-width: 100%; font-size: 1.1rem; line-height: 1.8;">
+                        Los médicos se dedican a cuidar la salud de las personas. Nuestro papel es ayudarles a proyectar
+                        una imagen profesional y llegar a más pacientes. Mientras ellos se enfocan en su misión,
+                        nosotros trabajamos para fortalecer su presencia digital.
+                    </p>
+                    <a href="https://wa.me/+50586972782" class="btn-primary-custom px-4 py-3 mt-3" target="_blank">
+                        Trabajemos Juntos <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <!-- Grilla de Valores -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="presencia-card text-center h-100" style="padding: 35px 20px;">
+                                <h4
+                                    style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; font-weight: 800;">
+                                    01.</h4>
+                                <h5 style="color: var(--text-white); font-size: 1.2rem;">Estrategia</h5>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Enfoque
+                                    basado en resultados medibles y objetivos claros.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="presencia-card text-center h-100" style="padding: 35px 20px;">
+                                <h4
+                                    style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; font-weight: 800;">
+                                    02.</h4>
+                                <h5 style="color: var(--text-white); font-size: 1.2rem;">Profesionalismo</h5>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Calidad
+                                    técnica y visual en cada detalle que diseñamos.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="presencia-card text-center h-100" style="padding: 35px 20px;">
+                                <h4
+                                    style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; font-weight: 800;">
+                                    03.</h4>
+                                <h5 style="color: var(--text-white); font-size: 1.2rem;">Compromiso</h5>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Involucrarnos
+                                    en el crecimiento real de tu negocio.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="presencia-card text-center h-100" style="padding: 35px 20px;">
+                                <h4
+                                    style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; font-weight: 800;">
+                                    04.</h4>
+                                <h5 style="color: var(--text-white); font-size: 1.2rem;">Innovación</h5>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">Uso de las
+                                    últimas tecnologías en marketing digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EXPERIENCIA / MENSAJE
+         ============================================ -->
+    <section class="section-mensaje">
+        <div class="container text-center" data-aos="zoom-in">
+            <h2 class="section-title text-white mb-4">¿Por qué elegir <span class="text-gradient">Najip Design</span>?
+            </h2>
+            <p class="mensaje-text mx-auto" style="max-width: 800px;">
+                Elegir Najip Design significa elegir un equipo comprometido con tus resultados. No ofrecemos paquetes
+                prediseñados, ofrecemos estrategias alineadas con los objetivos específicos de cada cliente.
+            </p>
+            <p class="mensaje-text mt-3 mx-auto" style="max-width: 800px;">
+                Nuestro equipo cuenta con años de experiencia en el sector y hemos ayudado a empresas y a profesionales
+                a multiplicar su impacto digital. Tu marca estará en manos seguras.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
          SECCIÓN: CTA FINAL
          ============================================ -->
     <section class="section-cta position-relative overflow-hidden" id="contacto" data-interactive-bg="true"
@@ -332,10 +964,10 @@
                 <div class="col-lg-2 col-md-6">
                     <h5>Navegación</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios Principales</a></li>
-                        <li><a href="soluciones.html">Soluciones Médicas</a></li>
-                        <li><a href="nosotros.html">Conócenos</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios Principales</a></li>
+                        <li><a href="#soluciones">Soluciones Médicas</a></li>
+                        <li><a href="#nosotros">Conócenos</a></li>
                     </ul>
                 </div>
 
@@ -386,6 +1018,8 @@
     </a>
     <div class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->

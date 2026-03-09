@@ -69,8 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ---- Inicializar Swiper (Carrusel Avanzado) ----
+    // ---- Inicializar Swiper (Carrusel Avanzado) ----
     if (document.querySelector('.servicesSwiper')) {
         new Swiper('.servicesSwiper', {
+            // Configuración del carrusel de servicios principales en servicios.html
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true, // Detiene el scroll automático al poner el cursor encima
             },
             coverflowEffect: {
                 rotate: 0,
@@ -105,10 +108,60 @@ document.addEventListener('DOMContentLoaded', function () {
                     spaceBetween: 30
                 },
                 1024: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 3,
                     spaceBetween: 40
                 }
             }
+        });
+    }
+
+    // ---- Inicializar Carruseles Infinitos (Soluciones) ----
+    if (document.querySelector('.marqueeSwiper1')) {
+        new Swiper('.marqueeSwiper1', {
+            spaceBetween: 20,
+            centeredSlides: true,
+            speed: 4000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            loop: true,
+            slidesPerView: 'auto',
+            allowTouchMove: true,
+        });
+    }
+
+    if (document.querySelector('.marqueeSwiper2')) {
+        new Swiper('.marqueeSwiper2', {
+            spaceBetween: 20,
+            centeredSlides: true,
+            speed: 4000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+                reverseDirection: true,
+            },
+            loop: true,
+            slidesPerView: 'auto',
+            allowTouchMove: true,
+        });
+    }
+
+    if (document.querySelector('.marqueeSwiper3')) {
+        new Swiper('.marqueeSwiper3', {
+            spaceBetween: 100,
+            centeredSlides: true,
+            speed: 4000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            loop: true,
+            slidesPerView: 'auto',
+            allowTouchMove: true,
         });
     }
 
@@ -229,29 +282,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const ctaSection = document.querySelector('[data-interactive-bg="true"]');
     if (ctaSection) {
         const interactiveElements = ctaSection.querySelectorAll('.interactive-element');
-        
+
         ctaSection.addEventListener('mousemove', (e) => {
             const rect = ctaSection.getBoundingClientRect();
             const x = e.clientX - rect.left; // Posición X del ratón dentro de la sección
             const y = e.clientY - rect.top; // Posición Y dentro de la sección
-            
+
             // Convertir a porcentajes relativas al centro
             const xOffset = (x / rect.width - 0.5) * 2;
             const yOffset = (y / rect.height - 0.5) * 2;
-            
+
             interactiveElements.forEach((el, index) => {
                 // Hacer las imágenes visibles al mover el ratón
                 el.style.opacity = '0.35';
-                
+
                 // Efecto pseudo-aleatorio de velocidad y dirección
-                const speed = (index + 1) * 25; 
-                const moveX = xOffset * speed * (index % 2 === 0 ? 1 : -1); 
+                const speed = (index + 1) * 25;
+                const moveX = xOffset * speed * (index % 2 === 0 ? 1 : -1);
                 const moveY = yOffset * speed * (index % 3 === 0 ? -1 : 1);
-                
+
                 el.style.transform = `translate(${moveX}px, ${moveY}px)`;
             });
         });
-        
+
         ctaSection.addEventListener('mouseleave', () => {
             interactiveElements.forEach((el) => {
                 // Ocultar al salir suavemente

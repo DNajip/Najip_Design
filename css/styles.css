@@ -9,7 +9,7 @@
     --primary-light: #2dd4c4;
     --primary-dark: #159e92;
     --primary-glow: rgba(27, 181, 167, 0.3);
-    
+
     --secondary: #054352;
     --secondary-light: #0a6a82;
     --secondary-dark: #032b35;
@@ -55,7 +55,9 @@
 }
 
 /* ---- Reset y Base ---- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -76,7 +78,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--text-white);
     font-weight: 700;
     line-height: 1.2;
@@ -364,7 +371,7 @@ section {
     position: absolute;
     font-size: 2rem;
     z-index: 2;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .floating-emoji.emoji-heart {
@@ -375,6 +382,91 @@ section {
 .floating-emoji.emoji-thumb {
     bottom: 20%;
     left: -15px;
+}
+
+.floating-emoji.emoji-star {
+    top: 60%;
+    right: -20px;
+}
+
+/* Modificador para efecto fluido (Marquee) en Swipers sin paradas */
+.marqueeSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+/* Badges flotantes decorativos */
+.floating-badge {
+    position: absolute;
+    background: rgba(2, 28, 36, 0.85);
+    border: 1px solid var(--border-glow);
+    color: var(--primary-light);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.95rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(27, 181, 167, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.floating-badge i {
+    color: #2dd4c4;
+}
+
+.badge-revenue {
+    top: 35%;
+    left: -40px;
+}
+
+.badge-patients {
+    bottom: 8%;
+    right: -30px;
+}
+
+/* Fix mobile viewport overflow for absolute decorative items */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-bottom: 120px !important;
+    }
+
+    .floating-emoji {
+        font-size: 1.5rem;
+    }
+
+    .floating-emoji.emoji-heart {
+        right: 10px;
+    }
+
+    .floating-emoji.emoji-thumb {
+        left: 10px;
+    }
+
+    .floating-emoji.emoji-star {
+        right: 0;
+    }
+
+    .floating-badge {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .badge-revenue {
+        left: -10px;
+    }
+
+    .badge-patients {
+        right: -10px;
+    }
+
+    /* Ensure the wrapper doesn't cause horizontal scrolling */
+    .hero-image-wrapper {
+        margin: 0 15px;
+        /* Adds space from the edge */
+    }
 }
 
 /* ============================================
@@ -431,7 +523,6 @@ section {
    SECCIÓN: PRESENCIA DIGITAL
    ============================================ */
 .section-presencia {
-    background: var(--bg-darker);
     position: relative;
 }
 
@@ -555,12 +646,15 @@ section {
 
 /* Tarjetas de servicio */
 .service-card {
-    background: var(--bg-card);
+    /* Fondo sólido calculado para reemplazar var(--bg-card) transparente y evitar solapamiento visual en 3D */
+    background: #032630;
     border-radius: var(--radius-xl);
     padding: 44px 32px;
     border: 1px solid var(--border-subtle);
     transition: all var(--transition-slow);
     height: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
 }
@@ -640,6 +734,8 @@ section {
     align-items: center;
     gap: 8px;
     transition: all var(--transition-fast);
+    margin-top: auto;
+    /* Empuja el botón al final de la tarjeta */
 }
 
 .service-card .btn-service:hover {
@@ -693,7 +789,6 @@ section {
    SECCIÓN: CTA
    ============================================ */
 .section-cta {
-    background: var(--bg-darker);
     position: relative;
     text-align: center;
 }
@@ -847,7 +942,7 @@ section {
     white-space: nowrap;
 }
 
-.whatsapp-float:hover ~ .whatsapp-tooltip {
+.whatsapp-float:hover~.whatsapp-tooltip {
     opacity: 1;
 }
 
@@ -858,7 +953,7 @@ section {
     height: 70px;
     width: auto;
     transition: all var(--transition-base);
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
 .navbar.scrolled .navbar-logo {
@@ -869,12 +964,13 @@ section {
    TSPARTICLES HERO BACKGROUND
    ============================================ */
 #tsparticles {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 0;
+    pointer-events: none;
 }
 
 .footer-logo {
