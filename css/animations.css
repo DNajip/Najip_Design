@@ -169,10 +169,73 @@
     }
 }
 
-/* ---- Animación Borde Gradiente Circular ---- */
+/* ---- Animación Borde Gradiente Circular y Orbita Circular ---- */
 @keyframes rotateGradient {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hero-image-wrapper {
+    aspect-ratio: 1/1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.orbiting-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Color blanco suave del contorno */
+    border-radius: 50%;
+    animation: spinOrbit 15s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spinOrbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.orbit-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.9); /* Puntos blancos */
+    border-radius: 50%;
+    /* Posicionar en el borde */
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.orbit-dot.dot-2 {
+    top: auto;
+    bottom: -7px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%) scale(0.7);
+}
+
+.orbit-dot.dot-3 {
+    top: 50%;
+    left: -7px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(0.8);
+}
+
+.orbit-dot.dot-4 {
+    top: 50%;
+    right: -7px;
+    left: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-50%) scale(0.9);
 }
 
 .animated-border-card {
